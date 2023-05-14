@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "589D79FD-DF5A-4FFD-8D4B-8CB363F364C2"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6EA35DF0-E09F-46E5-BA84-907DAC540E68"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NSDiffableDataSourceSnapshot/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "6EA35DF0-E09F-46E5-BA84-907DAC540E68 - dec2b6d50cfff511"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int) -&gt; NSDiffableDataSourceSnapshot.Todo in variable initialization expression of NSDiffableDataSourceSnapshot.ViewController.todos : Swift.Array&lt;NSDiffableDataSourceSnapshot.Todo&gt;"
+                  moduleName = "NSDiffableDataSourceSnapshot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryo.inomata/Desktop/NSDiffableDataSourceSnapshot/NSDiffableDataSourceSnapshot/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "6EA35DF0-E09F-46E5-BA84-907DAC540E68 - ab03410dc6aa717e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NSDiffableDataSourceSnapshot.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; NSDiffableDataSourceSnapshot.ViewController"
+                  moduleName = "NSDiffableDataSourceSnapshot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryo.inomata/Desktop/NSDiffableDataSourceSnapshot/NSDiffableDataSourceSnapshot/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "764">
+               </Location>
+               <Location
+                  uuid = "6EA35DF0-E09F-46E5-BA84-907DAC540E68 - 5e7b26bc2464e96c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NSDiffableDataSourceSnapshot.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;NSDiffableDataSourceSnapshot.ViewController&gt;"
+                  moduleName = "NSDiffableDataSourceSnapshot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryo.inomata/Desktop/NSDiffableDataSourceSnapshot/NSDiffableDataSourceSnapshot/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "732">
+               </Location>
+               <Location
+                  uuid = "6EA35DF0-E09F-46E5-BA84-907DAC540E68 - dec2b6d50cfff42b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int) -&gt; NSDiffableDataSourceSnapshot.Todo in variable initialization expression of NSDiffableDataSourceSnapshot.ViewController.todos : Swift.Array&lt;NSDiffableDataSourceSnapshot.Todo&gt;"
+                  moduleName = "NSDiffableDataSourceSnapshot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryo.inomata/Desktop/NSDiffableDataSourceSnapshot/NSDiffableDataSourceSnapshot/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "6EA35DF0-E09F-46E5-BA84-907DAC540E68 - ab03410dc6aa7084"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NSDiffableDataSourceSnapshot.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; NSDiffableDataSourceSnapshot.ViewController"
+                  moduleName = "NSDiffableDataSourceSnapshot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryo.inomata/Desktop/NSDiffableDataSourceSnapshot/NSDiffableDataSourceSnapshot/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "692">
+               </Location>
+               <Location
+                  uuid = "6EA35DF0-E09F-46E5-BA84-907DAC540E68 - 5e7b26bc2464e896"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NSDiffableDataSourceSnapshot.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;NSDiffableDataSourceSnapshot.ViewController&gt;"
+                  moduleName = "NSDiffableDataSourceSnapshot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryo.inomata/Desktop/NSDiffableDataSourceSnapshot/NSDiffableDataSourceSnapshot/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "660">
+               </Location>
+               <Location
+                  uuid = "6EA35DF0-E09F-46E5-BA84-907DAC540E68 - ab03410dc6aa7084"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NSDiffableDataSourceSnapshot.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; NSDiffableDataSourceSnapshot.ViewController"
+                  moduleName = "NSDiffableDataSourceSnapshot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryo.inomata/Desktop/NSDiffableDataSourceSnapshot/NSDiffableDataSourceSnapshot/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "688">
+               </Location>
+               <Location
+                  uuid = "6EA35DF0-E09F-46E5-BA84-907DAC540E68 - 5e7b26bc2464e896"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NSDiffableDataSourceSnapshot.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;NSDiffableDataSourceSnapshot.ViewController&gt;"
+                  moduleName = "NSDiffableDataSourceSnapshot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryo.inomata/Desktop/NSDiffableDataSourceSnapshot/NSDiffableDataSourceSnapshot/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "656">
+               </Location>
+               <Location
+                  uuid = "6EA35DF0-E09F-46E5-BA84-907DAC540E68 - ab03410dc6aa70fa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NSDiffableDataSourceSnapshot.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; NSDiffableDataSourceSnapshot.ViewController"
+                  moduleName = "NSDiffableDataSourceSnapshot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryo.inomata/Desktop/NSDiffableDataSourceSnapshot/NSDiffableDataSourceSnapshot/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "692">
+               </Location>
+               <Location
+                  uuid = "6EA35DF0-E09F-46E5-BA84-907DAC540E68 - 5e7b26bc2464e8e8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NSDiffableDataSourceSnapshot.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;NSDiffableDataSourceSnapshot.ViewController&gt;"
+                  moduleName = "NSDiffableDataSourceSnapshot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryo.inomata/Desktop/NSDiffableDataSourceSnapshot/NSDiffableDataSourceSnapshot/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "660">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C0A6ED47-0CF3-4C03-B2B4-4EA575263DE6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NSDiffableDataSourceSnapshot/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "todo(id:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "92BDEF08-ACD8-4C74-A35D-D5BC23D6B646"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NSDiffableDataSourceSnapshot/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "configureDataSource()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "92BDEF08-ACD8-4C74-A35D-D5BC23D6B646 - 6647d76f90ea4816"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NSDiffableDataSourceSnapshot.ViewController.configureDataSource() -&gt; ()"
+                  moduleName = "NSDiffableDataSourceSnapshot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryo.inomata/Desktop/NSDiffableDataSourceSnapshot/NSDiffableDataSourceSnapshot/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "556">
+               </Location>
+               <Location
+                  uuid = "92BDEF08-ACD8-4C74-A35D-D5BC23D6B646 - 97808a0ef53b6e11"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (__C.UICollectionView, Foundation.IndexPath, Foundation.UUID) -&gt; Swift.Optional&lt;__C.UICollectionViewCell&gt; in NSDiffableDataSourceSnapshot.ViewController.configureDataSource() -&gt; ()"
+                  moduleName = "NSDiffableDataSourceSnapshot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryo.inomata/Desktop/NSDiffableDataSourceSnapshot/NSDiffableDataSourceSnapshot/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "168">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6249DE01-B9BC-4FB7-AC75-5D108000AD81"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NSDiffableDataSourceSnapshot/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "getQiitaArticles()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "308C40A3-6A19-484F-A1C2-E69555BB553C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NSDiffableDataSourceSnapshot/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CBFF6C58-D386-4C7E-90CD-554DCD2DB45E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NSDiffableDataSourceSnapshot/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B9A289EE-16AE-4E4A-9DA8-9A51F663C4E4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NSDiffableDataSourceSnapshot/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F6E8DDE2-44F0-469E-8B66-654D4B6304D0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NSDiffableDataSourceSnapshot/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "applySnapshot()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F6E8DDE2-44F0-469E-8B66-654D4B6304D0 - e2ddd17d6c6b8f9e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NSDiffableDataSourceSnapshot.ViewController.applySnapshot() -&gt; ()"
+                  moduleName = "NSDiffableDataSourceSnapshot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryo.inomata/Desktop/NSDiffableDataSourceSnapshot/NSDiffableDataSourceSnapshot/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "380">
+               </Location>
+               <Location
+                  uuid = "F6E8DDE2-44F0-469E-8B66-654D4B6304D0 - e2ddd17d6c6b8fb9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NSDiffableDataSourceSnapshot.ViewController.applySnapshot() -&gt; ()"
+                  moduleName = "NSDiffableDataSourceSnapshot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryo.inomata/Desktop/NSDiffableDataSourceSnapshot/NSDiffableDataSourceSnapshot/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "380">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DF476D11-0AFD-4F28-8F87-0B0E05A100EF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NSDiffableDataSourceSnapshot/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "applySnapshot()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DF476D11-0AFD-4F28-8F87-0B0E05A100EF - e2ddd17d6c6b8ec3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NSDiffableDataSourceSnapshot.ViewController.applySnapshot() -&gt; ()"
+                  moduleName = "NSDiffableDataSourceSnapshot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryo.inomata/Desktop/NSDiffableDataSourceSnapshot/NSDiffableDataSourceSnapshot/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  uuid = "DF476D11-0AFD-4F28-8F87-0B0E05A100EF - e2ddd17d6c6b8ee2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NSDiffableDataSourceSnapshot.ViewController.applySnapshot() -&gt; ()"
+                  moduleName = "NSDiffableDataSourceSnapshot"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryo.inomata/Desktop/NSDiffableDataSourceSnapshot/NSDiffableDataSourceSnapshot/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "232">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4CED1190-C33C-4326-9812-DB9E5ED03666"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NSDiffableDataSourceSnapshot/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "getQiitaArticles()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9D339BB8-7F3A-4674-B600-681CBAFC791D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NSDiffableDataSourceSnapshot/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
