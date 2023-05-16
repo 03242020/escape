@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct QiitaArticle: Codable{
+struct QiitaArticle: Codable {
     var title: String
 }
