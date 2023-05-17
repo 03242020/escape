@@ -6,14 +6,13 @@ struct Todo: Identifiable {
     var title: String
     var done: Bool
 }
+//var articles: [QiitaArticle] = [QiitaArticle]()
 //2番目に読み込まれる
 //final class TodoRepository {
-//    func test() {
-//        let ViewController_ = ViewController()
-//        ViewController_.getQiitaArticles()
-//    }
 //    //30回for文回してる。30個の配列を用意している。
-//    private var todos: [Todo] = (1...30).map { i in
+////    var todos: [Todo] = Todo(id: UUID(), title: "", done: false)
+////    var num:Int = 5
+//    var todos: [Todo] = (1...5).map { i in
 //        Todo(id: UUID(), title: "Todo #\(i)", done: false)
 //    }
 //
@@ -30,16 +29,17 @@ final class ViewController: UIViewController {
     enum Section {
         case main
     }
-    var todoIDs: [Todo.ID] { todos.map(\.id) }
+    var todoIDs: [Todo.ID] { margedTodos.map(\.id) }
     func mutateTodoIDs() -> [Todo.ID] {
-        var mutateTodoIDs: [Todo.ID] { todos.map(\.id) }
+        var mutateTodoIDs: [Todo.ID] { margedTodos.map(\.id) }
         return mutateTodoIDs
     }
-    func todo(id: Todo.ID) -> Todo? {
-        todos.first(where: { $0.id == id })
+    func mutateTodo(id: Todo.ID) -> Todo? {
+        margedTodos.first(where: { $0.id == id })
     }
     //使ってない。使いたいような。
-    private var todos: [Todo] = []
+    var margedTodos: [Todo] = [Todo]()
+//    private var todos: [Todo] = Todo(id: UUID(), title: "Todo", done: false)
     func mutateTodos() -> [Todo] {
         //　直列処理に変更
         var mutateTodos: [Todo] = []
@@ -47,10 +47,34 @@ final class ViewController: UIViewController {
             getQiitaArticles()
         },completion: {
             mutateTodos = (1...articles.count).map { i in
-                Todo(id: UUID(), title: "Todo #\(i)", done: false)
+                Todo(id: UUID(), title: "\(articles[i].title) #\(i)", done: false)
             }
         })
         return mutateTodos
+    }
+    func marge() {
+        var todos: [Todo] = (1...articles.count).map { i in
+            Todo(id: UUID(), title: articles[0].title, done: false)
+//            Todo(id: UUID(), title: "Todo #\(i)", done: false)
+        }
+        self.margedTodos = todos
+        self.testFinish2 = 1
+    }
+    final class TodoRepository {
+        //30回for文回してる。30個の配列を用意している。
+    //    var todos: [Todo] = Todo(id: UUID(), title: "", done: false)
+    //    var num:Int = 5
+        var todos: [Todo] = (1...5).map { i in
+            Todo(id: UUID(), title: "Todo #\(i)", done: false)
+        }
+
+        //1-30の配列のid一覧(1-30)の作成
+        var todoIDs: [Todo.ID] { todos.map(\.id) }
+
+        //$0は雑に決めた引数名,今回はidを引数に入れて、最初に同じidがマッチしたらって動作
+        func todo(id: Todo.ID) -> Todo? {
+            todos.first(where: { $0.id == id })
+        }
     }
     func delayQiita(start:() -> Void, completion: () -> Void) {
         getQiitaArticles()
@@ -68,10 +92,11 @@ final class ViewController: UIViewController {
     private var dataSource: UICollectionViewDiffableDataSource<Section, Todo.ID>!
     let decoder: JSONDecoder = JSONDecoder()
     let encoder: JSONEncoder = JSONEncoder()
-    private var per_page: Int = 20
+    private var per_page: Int = 5
     private var tag: String = "iOS"
     var isLoading = false
     var testFinish:Int? = nil
+    var testFinish2:Int? = nil
     private var page: Int = 1
     //QiitaAPI制限を1時間1000回に増やす。ベアラー認証。
     let Auth_header: HTTPHeaders = [
@@ -89,19 +114,23 @@ final class ViewController: UIViewController {
 //initのタイミングで30個の配列を生成
     //変数なのでやはり最短で呼ばれる
 //    private var repository: TodoRepository?
-//    private var repository: TodoRepository = .init()
+    private var repository: TodoRepository = .init()
 
     override func viewDidLoad() {
         //3番目に読み込まれる
         super.viewDidLoad()
         getQiitaArticles()
         wait( { return self.testFinish == nil } ) {
-            // 取得しました
+//            // 取得しました
             print("finish")
+            self.marge()
+  
         }
-        configureCollectionView()
-        configureDataSource()
-        applySnapshot()
+        wait( { return self.testFinish2 == nil } ) {
+            self.configureCollectionView()
+            self.configureDataSource()
+            self.applySnapshot()
+        }
     }
     func getQiitaArticles() {
         guard loadStatus != "fetching" && loadStatus != "full" else { return }
@@ -118,11 +147,11 @@ final class ViewController: UIViewController {
                         if self.page == 100 {
                             self.loadStatus = "full"
                         }
-                        self.articles += viewArticles
+                        articles += viewArticles
 //                        print("getQiitaArticleArticles",articles)
                         //                    print("getQiitaArticles内且つdo内、サーチ処理中のpage ",self.page,"+ per_page " , self.per_page)
                         self.page += 1 //pageを+1する処理
-                        self.collectionView.reloadData()
+//                        self.collectionView.reloadData()
                         self.testFinish = 1
                     } catch {
                         self.loadStatus = "error"
@@ -134,6 +163,7 @@ final class ViewController: UIViewController {
             }
         }
     }
+
 //4番目に読み込まれる
     private func configureCollectionView() {
         let layout = UICollectionViewCompositionalLayout { sectionIndex, layoutEnvironment in
@@ -178,16 +208,19 @@ final class ViewController: UIViewController {
 
 
     private func configureDataSource() {
-        let todoCellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, Todo> { cell, indexPath, todo in
+        //todoどこで紐づけられてるのか
+        let todoCellRegistration = UICollectionView.CellRegistration<UICollectionViewListCell, Todo> { cell, indexPath, margedTodos in
             var configuration = cell.defaultContentConfiguration()
-//            configuration.text = self.articles[0].title
-            configuration.text = todo.title
+//            configuration.text = "ああ"
+//            configuration.text = todo.title
+            configuration.text = margedTodos.title
             cell.contentConfiguration = configuration
             
  //ここの段階ではQiitaAPIの保存を利用できるがここだと20回叩かれる
             //タップ時のチェックマークと思われる
             cell.accessories = [
-                .checkmark(displayed: .always, options: .init(isHidden: !todo.done))
+//              .checkmark(displayed: .always, options: .init(isHidden: todo.done))
+                .checkmark(displayed: .always, options: .init(isHidden: false))
             ]
         }
 //5番目に読み込まれる
@@ -200,14 +233,11 @@ final class ViewController: UIViewController {
 //            }
                 //同一idを探すメソッドが呼ばれる
                 //1か2番目
-                let todo = self?.todo(id: todoID)
+                let margedTodos = self?.mutateTodo(id: todoID)
 //                let todo = self?.repository.todo(id: todoID)
 //                print(todo)
-                return collectionView.dequeueConfiguredReusableCell(using: todoCellRegistration, for: indexPath, item: todo)
-            }
-        )
-        
-
+                return collectionView.dequeueConfiguredReusableCell(using: todoCellRegistration, for: indexPath, item: margedTodos)
+            })
     }
 //6番目に読み込まれる
     private func applySnapshot() {
@@ -219,7 +249,8 @@ final class ViewController: UIViewController {
 //        snapshot.appendItems(repository.todoIDs, toSection: .main)
 
         dataSource.apply(snapshot, animatingDifferences: true)
-        print("👺articles: ", self.articles)
+        print("👺articles: ", articles)
+//        print("repository.todos", repository.todos)
     }
 }
 
