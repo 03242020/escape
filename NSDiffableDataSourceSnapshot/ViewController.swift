@@ -27,7 +27,11 @@ final class ViewController: UIViewController {
     let Auth_header: HTTPHeaders = [
         "Authorization" : "Bearer daac5dc84737855447811d2982becb4afb2d688d"
     ]
-    private var articles: [QiitaArticle] = [QiitaArticle]() // ②取得した記事一覧を保持しておくプロパティ
+    private var articles: [QiitaArticle] = [QiitaArticle]() {
+        didSet {
+            self.marge()
+        }
+    } // ②取得した記事一覧を保持しておくプロパティ
     private var viewArticles: [QiitaArticle] = []
     //    必要以上のapi叩かない様にする
     private var loadStatus: String = "initial"
@@ -44,25 +48,19 @@ final class ViewController: UIViewController {
 //            Todo(id: UUID(), title: "Todo #\(i)", done: false)
         }
         self.margedTodos = todos
-        self.testFinish2 = 1
+//        self.testFinish2 = 1
+        self.configureCollectionView()
+        self.configureDataSource()
+        self.applySnapshot()
     }
-
+    
     override func viewDidLoad() {
         //3番目に読み込まれる
         super.viewDidLoad()
         getQiitaArticles()
-        wait( { return self.testFinish == nil } ) {
-            // 取得しました
-            print("finish")
-            self.marge()
-  
-        }
-        wait( { return self.testFinish2 == nil } ) {
-            self.configureCollectionView()
-            self.configureDataSource()
-            self.applySnapshot()
-        }
     }
+    
+    
     //4番目に読み込まれる
         private func configureCollectionView() {
             let layout = UICollectionViewCompositionalLayout { sectionIndex, layoutEnvironment in
@@ -142,7 +140,7 @@ final class ViewController: UIViewController {
                         }
                         articles += viewArticles
                         self.page += 1 //pageを+1する処理
-                        self.testFinish = 1
+//                        self.testFinish = 1
                     } catch {
                         self.loadStatus = "error"
                         print("デコードに失敗しました")
@@ -153,30 +151,50 @@ final class ViewController: UIViewController {
             }
         }
     }
+    //端末でアプリを起動してから、スプラッシュ画面が出る。初期起動、ホーム画面が表示される(完了)までを一旦みる。
+    //重要な処理にコメントを打つ
+    //ログイン画面を飛ばす。
+    //ログイン情報を確認する。出来たらこの画面に進む。そうでない場合は、などのコメントを打つ。
+    //viewdidload→次は何が呼ばれるのか。などを確認する。
+    //bindされているところ、どういうアクションが終わった後に次に動くものを細かくみる。
+    
+    //シンプルに、worldのコードを読んで、diffableの動き順を確認。
+    //最新のコミットがdevelop_repair
+    //タスク: アプリ起動からホーム画面表示まで。コメント打つのと、コードシンプルに(world参照diffable) 来週水曜までに終わらせる。
+    //ライフサイクルdidloadやapearなどが怪しい
+    //worldの方にわかりやすい記述があるので、そちらを参照するといいと釘を刺していただいた。
+    //diffableを目的というよりは、処理の流れを優先して行う。処理フローを念頭に置いてリファクタするように指示
+    //Todoのサイトの一覧に表示させるデータ、画面の表示とともに既に用意されている。
+    //worldを見て、既に用意されている。
+    //他のサイトで用意タイミングを見る(優先度低)JSON結合のものを見る。
+    //コメント打ちながら(絶対)解析しよう
+    //worldでどのタイミングでdiffableのタイミングが書いてあるので、そちらを強参照する。
+    //worldのブランチを切って、それを共有する。
+    
     /// 条件をクリアするまで待ちます
     ///
     /// - Parameters:
     ///   - waitContinuation: 待機条件
     ///   - compleation: 通過後の処理
-    private func wait(_ waitContinuation: @escaping (()->Bool), compleation: @escaping (()->Void)) {
-        var wait = waitContinuation()
-        // 0.01秒周期で待機条件をクリアするまで待ちます。
-        let semaphore = DispatchSemaphore(value: 0)
-        DispatchQueue.global().async {
-            while wait {
-                DispatchQueue.main.async {
-                    wait = waitContinuation()
-                    semaphore.signal()
-                }
-                semaphore.wait()
-                Thread.sleep(forTimeInterval: 0.01)
-            }
-            // 待機条件をクリアしたので通過後の処理を行います。
-            DispatchQueue.main.async {
-                compleation()
-            }
-        }
-    }
+//    private func wait(_ waitContinuation: @escaping (()->Bool), compleation: @escaping (()->Void)) {
+//        var wait = waitContinuation()
+//        // 0.01秒周期で待機条件をクリアするまで待ちます。
+//        let semaphore = DispatchSemaphore(value: 0)
+//        DispatchQueue.global().async {
+//            while wait {
+//                DispatchQueue.main.async {
+//                    wait = waitContinuation()
+//                    semaphore.signal()
+//                }
+//                semaphore.wait()
+//                Thread.sleep(forTimeInterval: 0.01)
+//            }
+//            // 待機条件をクリアしたので通過後の処理を行います。
+//            DispatchQueue.main.async {
+//                compleation()
+//            }
+//        }
+//    }
 }
 
 extension ViewController: UICollectionViewDelegate {
